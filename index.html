@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shege Wrapped 2025 | How Much Did You Suffer?</title>
+    <meta name="description"
+        content="Discover your Shege stats for 2025! Find out how much wahala you experienced and share your Shege Wrapped with friends.">
+    <meta property="og:title" content="Shege Wrapped 2025">
+    <meta property="og:description"
+        content="How much shege did you see this year? Get your personalized Shege Wrapped!">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- html2canvas for image export -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="screen loading-screen">
+        <div class="loading-content">
+            <div class="logo-container">
+                <img src="images/dark-logo.png" alt="Shege Wrapped" class="logo loading-logo" id="loading-logo">
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen home-screen hidden">
+        <div class="home-content">
+            <div class="home-logo-container">
+                <img src="images/light-logo.png" alt="Shege Wrapped" class="logo home-logo" id="home-logo">
+            </div>
+            <div class="home-text">
+                <h1 class="home-title">Shege Wrapped</h1>
+                <p class="home-subtitle">How much <span class="highlight">shege</span> did you see this year?</p>
+                <p class="home-desc">2025 don do things to all of us. Let's see your wahala stats!</p>
+            </div>
+            <button id="start-btn" class="btn btn-primary">
+                <span>Get My Wrapped</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+        <div class="home-decoration">
+            <div class="floating-emoji">😭</div>
+            <div class="floating-emoji">💀</div>
+            <div class="floating-emoji">😤</div>
+            <div class="floating-emoji">🔥</div>
+        </div>
+    </div>
+
+    <!-- Questions Screen -->
+    <div id="questions-screen" class="screen questions-screen hidden">
+        <div class="questions-header">
+            <button id="back-btn" class="btn btn-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </button>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text">1/20</span>
+            </div>
+        </div>
+
+        <div class="question-container" id="question-container">
+            <!-- Questions will be dynamically inserted here -->
+        </div>
+
+        <div class="questions-footer">
+            <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+            <button id="next-btn" class="btn btn-primary">Next</button>
+        </div>
+    </div>
+
+    <!-- Wrapped/Results Screen -->
+    <div id="wrapped-screen" class="screen wrapped-screen hidden">
+        <div class="story-container" id="story-container">
+            <!-- Story cards will be dynamically inserted here -->
+        </div>
+        <div class="story-progress" id="story-progress">
+            <!-- Progress dots will be dynamically inserted here -->
+        </div>
+        <div class="story-controls">
+            <button id="share-btn" class="btn btn-share">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span>Save & Share</span>
+            </button>
+            <button id="restart-btn" class="btn btn-restart">Start Over</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
