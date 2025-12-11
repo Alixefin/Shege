@@ -489,7 +489,7 @@ function renderStoryCards() {
             ${isLastCard(index) ? `<button class="btn btn-home" onclick="restart()">🏠 Go Home</button>` : ''}
             <div class="story-brand">
                 <img src="images/dark-logo.png" alt="Shege" class="story-brand-logo">
-                <div class="story-brand-text">ShegeWrapped2025@Max</div>
+                <div class="story-brand-text">Designed by Maxwell</div>
             </div>
         </div>
     `).join('');
