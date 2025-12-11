@@ -476,6 +476,8 @@ function generateWrapped() {
 }
 
 function renderStoryCards() {
+    const isLastCard = (index) => index === storyCards.length - 1;
+
     elements.storyContainer.innerHTML = storyCards.map((card, index) => `
         <div class="story-card ${card.type} ${index === 0 ? 'active' : ''}" id="story-${index}">
             <div class="story-emoji">${card.emoji}</div>
@@ -484,8 +486,9 @@ function renderStoryCards() {
             ${card.label ? `<div class="story-label">${card.label}</div>` : ''}
             ${card.anthem ? `<div class="story-label" style="font-size: 1.2rem; margin-bottom: 1rem;">${card.anthem}</div>` : ''}
             <p class="story-description">${card.description}</p>
+            ${isLastCard(index) ? `<button class="btn btn-home" onclick="restart()">🏠 Go Home</button>` : ''}
             <div class="story-brand">
-                <img src="images/light-logo.png" alt="Shege" class="story-brand-logo">
+                <img src="images/dark-logo.png" alt="Shege" class="story-brand-logo">
                 <div class="story-brand-text">ShegeWrapped2025@Max</div>
             </div>
         </div>

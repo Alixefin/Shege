@@ -383,6 +383,23 @@ button {
     padding: var(--spacing-sm);
 }
 
+.btn-home {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+    margin-top: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+}
+
+.btn-home:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 /* ========================================
    QUESTIONS SCREEN
 ======================================== */
