@@ -4,13 +4,11 @@
  */
 
 // ==========================================
-// QUESTIONS DATA - Including Student Questions
+// QUESTIONS DATA - 10 Fun Direct Questions
 // ==========================================
 const questions = [
-    // General Life Shege
     {
         id: 1,
-        category: 'general',
         question: "What was your biggest 'wahala' of 2025?",
         type: 'options',
         options: [
@@ -24,19 +22,7 @@ const questions = [
     },
     {
         id: 2,
-        category: 'infrastructure',
-        question: "How many times did NEPA disappoint you this year?",
-        type: 'scale',
-        min: 0,
-        max: 100,
-        step: 10,
-        unit: 'times',
-        labels: ['Never (lies!)', 'Lost count']
-    },
-    {
-        id: 3,
-        category: 'infrastructure',
-        question: "Rate your fuel queue experience this year",
+        question: "Rate your fuel queue shege this year",
         type: 'scale',
         min: 1,
         max: 10,
@@ -44,185 +30,96 @@ const questions = [
         labels: ['No wahala', 'Maximum shege']
     },
     {
+        id: 3,
+        question: "Which network showed you shege this year?",
+        type: 'multiselect',
+        options: [
+            'MTN 💛',
+            'Glo 🟢',
+            'Airtel ❤️',
+            '9mobile 💚',
+            'All of them! 😤'
+        ]
+    },
+    {
         id: 4,
-        category: 'finance',
-        question: "How many times did your salary/allowance finish before month-end?",
-        type: 'scale',
-        min: 0,
-        max: 12,
-        step: 1,
-        unit: 'months',
-        labels: ['Never', 'Every month']
+        question: "How much did you spend on data & recharge this year?",
+        type: 'options',
+        options: [
+            'Under ₦10,000 📱',
+            '₦10,000 - ₦50,000 💸',
+            '₦50,000 - ₦100,000 😰',
+            '₦100,000 - ₦200,000 💀',
+            'Over ₦200,000 (I dont want to think about it) 😭'
+        ]
     },
     {
         id: 5,
-        category: 'hustle',
-        question: "Rate your 'side hustle' energy this year",
-        type: 'scale',
-        min: 1,
-        max: 10,
-        step: 1,
-        labels: ['No hustle', 'Hustle master']
-    },
-    // Student-Specific Questions
-    {
-        id: 6,
-        category: 'student',
-        question: "How many all-nighters did you pull this year?",
-        type: 'scale',
-        min: 0,
-        max: 50,
-        step: 5,
-        unit: 'nights',
-        labels: ['I sleep well', 'Sleep is a myth']
-    },
-    {
-        id: 7,
-        category: 'student',
-        question: "Rate your lecturer/teacher wahala level",
-        type: 'scale',
-        min: 1,
-        max: 10,
-        step: 1,
-        labels: ['Angels', 'Wicked people']
-    },
-    {
-        id: 8,
-        category: 'student',
-        question: "How many times did you miss a deadline?",
-        type: 'scale',
-        min: 0,
-        max: 20,
-        step: 1,
-        unit: 'times',
-        labels: ['Never', 'Too many']
-    },
-    {
-        id: 9,
-        category: 'student',
-        question: "Rate your school fees/tuition stress",
-        type: 'scale',
-        min: 1,
-        max: 10,
-        step: 1,
-        labels: ['No stress', 'Maximum pressure']
-    },
-    // More General Questions
-    {
-        id: 10,
-        category: 'spiritual',
-        question: "How many times did you say 'God when?' this year?",
+        question: "How many times did you sigh and say 'Omo' this year?",
         type: 'scale',
         min: 0,
         max: 100,
         step: 10,
-        unit: 'times',
-        labels: ['Rarely', 'Daily devotion']
+        labels: ['Rarely', 'Every single day']
     },
     {
-        id: 11,
-        category: 'general',
-        question: "What was your biggest 'shege' moment of 2025?",
+        id: 6,
+        question: "Which month did you see SHEGE the most?",
         type: 'options',
         options: [
-            'Lost money/got scammed 💔',
-            'Embarrassing moment in public 😅',
-            'Heartbreak/breakup 💔',
-            'Failed exam/interview 📝',
-            'Got stuck in traffic for hours 🚗',
-            'Phone/laptop crashed 📱'
+            'January 🥶',
+            'February 💔',
+            'March 🌧️',
+            'April 😤',
+            'May 🔥',
+            'June ☀️',
+            'July 💦',
+            'August 📚',
+            'September 😰',
+            'October 🎃',
+            'November 🍂',
+            'December 🎄'
         ]
     },
     {
-        id: 12,
-        category: 'survival',
+        id: 7,
+        question: "Which month did you enjoy the most?",
+        type: 'options',
+        options: [
+            'January 🎉',
+            'February ❤️',
+            'March 🌸',
+            'April 🌈',
+            'May 🌻',
+            'June ☀️',
+            'July 🏖️',
+            'August 🎊',
+            'September 📖',
+            'October 🎃',
+            'November 🦃',
+            'December 🎄'
+        ]
+    },
+    {
+        id: 8,
+        question: "How many times did NEPA take light this year?",
+        type: 'scale',
+        min: 0,
+        max: 100,
+        step: 10,
+        labels: ['Never (lies!)', 'Lost count']
+    },
+    {
+        id: 9,
         question: "How many times did you eat noodles as a main meal?",
         type: 'scale',
         min: 0,
         max: 100,
         step: 10,
-        unit: 'times',
         labels: ['Fancy life', 'Indomie gang']
     },
     {
-        id: 13,
-        category: 'housing',
-        question: "Rate your landlord/accommodation wahala",
-        type: 'scale',
-        min: 1,
-        max: 10,
-        step: 1,
-        labels: ['No issues', 'Worst nightmare']
-    },
-    {
-        id: 14,
-        category: 'hustle',
-        question: "How many job/internship applications did you send?",
-        type: 'scale',
-        min: 0,
-        max: 100,
-        step: 10,
-        unit: 'applications',
-        labels: ['None', 'Spray & pray']
-    },
-    {
-        id: 15,
-        category: 'transport',
-        question: "What's the longest you waited for transport?",
-        type: 'options',
-        options: [
-            'Under 30 minutes ⚡',
-            '30 mins - 1 hour 😤',
-            '1 - 2 hours 😫',
-            '2 - 3 hours 💀',
-            '3+ hours (I walked) 🚶'
-        ]
-    },
-    {
-        id: 16,
-        category: 'infrastructure',
-        question: "Rate your network/data wahala (MTN, Glo, Airtel)",
-        type: 'scale',
-        min: 1,
-        max: 10,
-        step: 1,
-        labels: ['Smooth', 'Worst thing ever']
-    },
-    {
-        id: 17,
-        category: 'social',
-        question: "How many 'owanbe'/parties did you attend?",
-        type: 'scale',
-        min: 0,
-        max: 20,
-        step: 1,
-        unit: 'parties',
-        labels: ['Homebody', 'Party animal']
-    },
-    {
-        id: 18,
-        category: 'health',
-        question: "Rate your 'body no be firewood' energy this year",
-        type: 'scale',
-        min: 1,
-        max: 10,
-        step: 1,
-        labels: ['Strong body', 'I need rest']
-    },
-    {
-        id: 19,
-        category: 'tech',
-        question: "How many times did you restart your device to fix something?",
-        type: 'scale',
-        min: 0,
-        max: 50,
-        step: 5,
-        unit: 'times',
-        labels: ['Rarely', 'Tech support mode']
-    },
-    {
-        id: 20,
-        category: 'vibe',
+        id: 10,
         question: "Pick your survival anthem for 2025",
         type: 'options',
         options: [
@@ -271,12 +168,9 @@ const elements = {
 // SCREEN NAVIGATION
 // ==========================================
 function showScreen(screenName) {
-    // Hide all screens
     Object.values(screens).forEach(screen => {
         screen.classList.add('hidden');
     });
-
-    // Show target screen
     screens[screenName].classList.remove('hidden');
     currentScreen = screenName;
 }
@@ -287,7 +181,42 @@ function showScreen(screenName) {
 function initLoadingScreen() {
     setTimeout(() => {
         showScreen('home');
-    }, 3000);
+    }, 5000); // 5 seconds loading
+}
+
+// ==========================================
+// VALIDATION - Check if question is answered
+// ==========================================
+function isQuestionAnswered() {
+    const question = questions[currentQuestion];
+    const answer = answers[question.id];
+
+    if (question.type === 'options') {
+        return answer !== undefined;
+    } else if (question.type === 'multiselect') {
+        return answer && answer.length > 0;
+    } else if (question.type === 'scale') {
+        return answer !== undefined;
+    }
+    return false;
+}
+
+function showValidationError() {
+    const questionCard = document.querySelector('.question-card');
+    questionCard.classList.add('shake');
+
+    // Show error message
+    let errorMsg = document.querySelector('.validation-error');
+    if (!errorMsg) {
+        errorMsg = document.createElement('div');
+        errorMsg.className = 'validation-error';
+        errorMsg.textContent = 'Please answer this question to continue!';
+        questionCard.appendChild(errorMsg);
+    }
+
+    setTimeout(() => {
+        questionCard.classList.remove('shake');
+    }, 500);
 }
 
 // ==========================================
@@ -321,11 +250,24 @@ function renderQuestion() {
                 `).join('')}
             </div>
         `;
+    } else if (question.type === 'multiselect') {
+        const selectedOptions = answers[question.id] || [];
+        inputHTML = `
+            <div class="options-container multiselect">
+                <p class="multiselect-hint">Select all that apply</p>
+                ${question.options.map((option, index) => `
+                    <button class="option-btn ${selectedOptions.includes(index) ? 'selected' : ''}" 
+                            data-value="${index}">
+                        ${option}
+                    </button>
+                `).join('')}
+            </div>
+        `;
     } else if (question.type === 'scale') {
         const currentValue = answers[question.id] !== undefined ? answers[question.id] : Math.round((question.min + question.max) / 2);
         inputHTML = `
             <div class="scale-container">
-                <div class="scale-value" id="scale-value">${currentValue}${question.unit ? '' : ''}</div>
+                <div class="scale-value" id="scale-value">${currentValue}</div>
                 <input type="range" 
                        class="scale-input" 
                        id="scale-input"
@@ -338,14 +280,6 @@ function renderQuestion() {
                     <span>${question.labels[1]}</span>
                 </div>
             </div>
-        `;
-    } else if (question.type === 'text') {
-        inputHTML = `
-            <input type="text" 
-                   class="text-input" 
-                   id="text-input"
-                   placeholder="Type your answer..."
-                   value="${answers[question.id] || ''}">
         `;
     }
 
@@ -364,30 +298,54 @@ function renderQuestion() {
                 document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
                 e.target.classList.add('selected');
                 answers[question.id] = parseInt(e.target.dataset.value);
+                removeValidationError();
+            });
+        });
+    } else if (question.type === 'multiselect') {
+        document.querySelectorAll('.option-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const value = parseInt(e.target.dataset.value);
+                if (!answers[question.id]) answers[question.id] = [];
+
+                const idx = answers[question.id].indexOf(value);
+                if (idx > -1) {
+                    answers[question.id].splice(idx, 1);
+                    e.target.classList.remove('selected');
+                } else {
+                    answers[question.id].push(value);
+                    e.target.classList.add('selected');
+                }
+                removeValidationError();
             });
         });
     } else if (question.type === 'scale') {
         const scaleInput = document.getElementById('scale-input');
         const scaleValue = document.getElementById('scale-value');
 
-        scaleInput.addEventListener('input', (e) => {
-            scaleValue.textContent = e.target.value;
-            answers[question.id] = parseInt(e.target.value);
-        });
-
-        // Set initial value if not answered
+        // Set initial value
         if (answers[question.id] === undefined) {
             answers[question.id] = parseInt(scaleInput.value);
         }
-    } else if (question.type === 'text') {
-        const textInput = document.getElementById('text-input');
-        textInput.addEventListener('input', (e) => {
-            answers[question.id] = e.target.value;
+
+        scaleInput.addEventListener('input', (e) => {
+            scaleValue.textContent = e.target.value;
+            answers[question.id] = parseInt(e.target.value);
+            removeValidationError();
         });
     }
 }
 
+function removeValidationError() {
+    const errorMsg = document.querySelector('.validation-error');
+    if (errorMsg) errorMsg.remove();
+}
+
 function nextQuestion() {
+    if (!isQuestionAnswered()) {
+        showValidationError();
+        return;
+    }
+
     if (currentQuestion < questions.length - 1) {
         currentQuestion++;
         renderQuestion();
@@ -410,7 +368,6 @@ let currentStory = 0;
 let storyCards = [];
 
 function calculateShegeLevel() {
-    // Calculate overall shege score based on answers
     let totalScore = 0;
     let maxPossible = 0;
 
@@ -419,8 +376,10 @@ function calculateShegeLevel() {
             totalScore += (answers[q.id] || 0);
             maxPossible += q.max;
         } else if (q.type === 'options') {
-            // Higher option index = more shege
             totalScore += (answers[q.id] || 0) * 10;
+            maxPossible += (q.options.length - 1) * 10;
+        } else if (q.type === 'multiselect') {
+            totalScore += ((answers[q.id] || []).length) * 10;
             maxPossible += (q.options.length - 1) * 10;
         }
     });
@@ -440,20 +399,19 @@ function generateWrapped() {
     const shegeLevel = calculateShegeLevel();
     const shegeTitle = getShegeTitle(shegeLevel);
 
-    // Get specific answers for stats
-    const nepaCount = answers[2] || 0;
-    const allNighters = answers[6] || 0;
-    const noodleCount = answers[12] || 0;
-    const godWhenCount = answers[10] || 0;
-    const jobApps = answers[14] || 0;
+    // Get specific answers
+    const nepaCount = answers[8] || 0;
+    const noodleCount = answers[9] || 0;
+    const omoCount = answers[5] || 0;
+    const shegeMonth = questions[5].options[answers[6] || 0];
+    const enjoyMonth = questions[6].options[answers[7] || 0];
+    const anthem = questions[9].options[answers[10] || 0];
 
-    // Get selected options text
-    const biggestWahala = questions[0].options[answers[1] || 0];
-    const shegeMoment = questions[10].options[answers[11] || 0];
-    const anthem = questions[19].options[answers[20] || 0];
+    // Get network names
+    const networkOptions = questions[2].options;
+    const selectedNetworks = (answers[3] || []).map(i => networkOptions[i]).join(', ') || 'None';
 
     storyCards = [
-        // Intro Card
         {
             type: 'card-intro',
             emoji: '📊',
@@ -461,7 +419,6 @@ function generateWrapped() {
             value: 'Shege Wrapped',
             description: "Let's see how much wahala you experienced this year..."
         },
-        // Shege Level Card
         {
             type: 'card-highlight',
             emoji: shegeLevel >= 60 ? '🔥' : '✨',
@@ -469,7 +426,6 @@ function generateWrapped() {
             value: `${shegeLevel}%`,
             description: shegeTitle.desc
         },
-        // Title Card
         {
             type: 'card-stat',
             emoji: shegeLevel >= 80 ? '💀' : shegeLevel >= 50 ? '😤' : '😎',
@@ -477,49 +433,41 @@ function generateWrapped() {
             value: shegeTitle.title,
             description: 'This is your official 2025 shege certificate'
         },
-        // NEPA Stats
         {
             type: 'card-dark',
-            emoji: '💡',
-            title: 'NEPA Wahala',
-            value: nepaCount + '+',
-            label: 'power outages survived',
-            description: nepaCount >= 50 ? "You're basically living in candlelight!" : "The darkness couldn't stop you!"
+            emoji: '📱',
+            title: 'Network Wahala',
+            value: selectedNetworks.split(',')[0],
+            description: `These networks showed you maximum shege: ${selectedNetworks}`
         },
-        // Student Stats (if applicable)
         {
             type: 'card-stat',
-            emoji: '📚',
-            title: 'Academic Hustle',
-            value: allNighters,
-            label: 'all-nighters pulled',
-            description: allNighters >= 20 ? 'Your eye bags have eye bags!' : 'The grind never stops!'
+            emoji: '😮‍💨',
+            title: '"Omo" Count',
+            value: omoCount + '+',
+            label: 'times you sighed "Omo"',
+            description: omoCount >= 50 ? 'You said it so much it became your mantra!' : 'Classic Nigerian expression!'
         },
-        // Survival Stats
         {
             type: 'card-highlight',
-            emoji: '🍜',
-            title: 'Indomie Gang',
-            value: noodleCount + '+',
-            label: 'noodle meals consumed',
-            description: noodleCount >= 50 ? 'Noodles are basically your sponsor now' : 'A true survivor\'s diet!'
+            emoji: '📅',
+            title: 'Worst Month',
+            value: shegeMonth,
+            description: 'This month really tested your patience and strength!'
         },
-        // God When Count
         {
             type: 'card-intro',
-            emoji: '🙏',
-            title: 'Faith Tested',
-            value: godWhenCount + '+',
-            label: 'times you said "God when?"',
-            description: 'But you kept the faith strong!'
+            emoji: '🎉',
+            title: 'Best Month',
+            value: enjoyMonth,
+            description: 'At least you had some good times this year!'
         },
-        // Summary Card
         {
             type: 'card-summary',
             emoji: '🏆',
             title: '2025 Summary',
             anthem: anthem,
-            description: `Despite all the shege, you made it! Here's to a better 2025! 🎉`
+            description: `Despite all the shege, you made it! Here's to a better 2026! 🎉`
         }
     ];
 
@@ -528,7 +476,6 @@ function generateWrapped() {
 }
 
 function renderStoryCards() {
-    // Render story cards
     elements.storyContainer.innerHTML = storyCards.map((card, index) => `
         <div class="story-card ${card.type} ${index === 0 ? 'active' : ''}" id="story-${index}">
             <div class="story-emoji">${card.emoji}</div>
@@ -544,15 +491,12 @@ function renderStoryCards() {
         </div>
     `).join('');
 
-    // Render progress dots
     elements.storyProgress.innerHTML = storyCards.map((_, index) => `
         <div class="progress-dot ${index === 0 ? 'active' : ''}" data-index="${index}"></div>
     `).join('');
 
-    // Add click listeners for navigation
     elements.storyContainer.addEventListener('click', handleStoryClick);
 
-    // Add dot click listeners
     document.querySelectorAll('.progress-dot').forEach(dot => {
         dot.addEventListener('click', (e) => {
             goToStory(parseInt(e.target.dataset.index));
@@ -565,7 +509,6 @@ function handleStoryClick(e) {
     const clickX = e.clientX - containerRect.left;
     const containerWidth = containerRect.width;
 
-    // Click on right half = next, left half = previous
     if (clickX > containerWidth / 2) {
         nextStory();
     } else {
@@ -576,12 +519,10 @@ function handleStoryClick(e) {
 function goToStory(index) {
     if (index < 0 || index >= storyCards.length) return;
 
-    // Update active card
     document.querySelectorAll('.story-card').forEach((card, i) => {
         card.classList.toggle('active', i === index);
     });
 
-    // Update progress dots
     document.querySelectorAll('.progress-dot').forEach((dot, i) => {
         dot.classList.toggle('active', i === index);
     });
@@ -609,7 +550,6 @@ async function saveAsImage() {
     if (!activeCard) return;
 
     try {
-        // Temporarily make card visible for capture
         const canvas = await html2canvas(activeCard, {
             backgroundColor: null,
             scale: 2,
@@ -617,7 +557,6 @@ async function saveAsImage() {
             logging: false
         });
 
-        // Create download link
         const link = document.createElement('a');
         link.download = `shege-wrapped-${currentStory + 1}.png`;
         link.href = canvas.toDataURL('image/png');
@@ -659,7 +598,6 @@ function initEventListeners() {
     elements.shareBtn.addEventListener('click', saveAsImage);
     elements.restartBtn.addEventListener('click', restart);
 
-    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (currentScreen === 'questions') {
             if (e.key === 'ArrowRight' || e.key === 'Enter') nextQuestion();
@@ -670,7 +608,6 @@ function initEventListeners() {
         }
     });
 
-    // Touch swipe support for stories
     let touchStartX = 0;
     let touchEndX = 0;
 
@@ -705,5 +642,4 @@ function init() {
     initEventListeners();
 }
 
-// Start the app
 init();
